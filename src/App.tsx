@@ -9,7 +9,7 @@ import ExperiencesPage from './pages/experiences-page';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/enoticket-mf">
             <Layout>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
