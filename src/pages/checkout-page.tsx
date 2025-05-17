@@ -10,7 +10,7 @@ import { EmptyCartMessage } from '../components/checkout/empty-cart-message';
 const CheckoutPage = () => {
     const { items } = useCartStore();
     const [showOrderSummary, setShowOrderSummary] = useState(false);
-    const [step, setStep] = useState(1);
+    const [step] = useState(1);
 
     if (items.length === 0) {
         return <EmptyCartMessage />;
