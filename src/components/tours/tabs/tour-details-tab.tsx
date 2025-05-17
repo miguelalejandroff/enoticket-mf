@@ -1,6 +1,7 @@
 import { Navigation, Timer, Ban, Shirt, CreditCard, Wine, Info } from 'lucide-react';
 import { DetailCard } from './detail-card';
 import type { WineTour } from '../../../types';
+import { TourMapa } from './tour-map';
 
 interface TourDetailsTabProps {
     tour: WineTour;
@@ -9,6 +10,7 @@ interface TourDetailsTabProps {
 export const TourDetailsTab = ({ tour }: TourDetailsTabProps) => {
     return (
         <>
+            <TourMapa />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DetailCard
                     icon={<Navigation className="h-5 w-5 text-[#7D0633] mr-2" />}
