@@ -1,4 +1,6 @@
-import { Star, Shield, Leaf, Wine, Landmark, Crown } from 'lucide-react'; // Puedes personalizar estos íconos
+import { Star, Shield, Leaf, Wine, Landmark, Crown } from 'lucide-react';
+import { FilterHeader } from './filter-header';
+import { CheckboxFilterGroup } from './checkbox-filter-group';
 
 interface FeaturesFilterProps {
     selectedFeatures: string[];
@@ -6,39 +8,18 @@ interface FeaturesFilterProps {
 }
 
 const FEATURES = [
-    { label: 'Premium', icon: Crown },
-    { label: 'Boutique', icon: Shield },
-    { label: 'Gourmet', icon: Wine },
-    { label: 'Histórico', icon: Landmark },
-    { label: 'Orgánico', icon: Leaf },
+    { value: 'Premium', label: 'Premium', icon: <Crown className="h-4 w-4 text-[#7D0633]" /> },
+    { value: 'Boutique', label: 'Boutique', icon: <Shield className="h-4 w-4 text-[#7D0633]" /> },
+    { value: 'Gourmet', label: 'Gourmet', icon: <Wine className="h-4 w-4 text-[#7D0633]" /> },
+    { value: 'Histórico', label: 'Histórico', icon: <Landmark className="h-4 w-4 text-[#7D0633]" /> },
+    { value: 'Orgánico', label: 'Orgánico', icon: <Leaf className="h-4 w-4 text-[#7D0633]" /> },
 ];
 
 export const FeaturesFilter = ({ selectedFeatures, onChange }: FeaturesFilterProps) => {
-    const handleCheckboxChange = (feature: string, checked: boolean) => {
-        const updated = checked ? [...selectedFeatures, feature] : selectedFeatures.filter((f) => f !== feature);
-        onChange(updated);
-    };
-
     return (
         <div className="mb-6">
-            <h3 className="text-sm font-medium text-[#2E4347] mb-3 flex items-center">
-                <Star className="h-4 w-4 mr-2 text-[#7D0633]" />
-                Características Especiales
-            </h3>
-            <div className="space-y-3">
-                {FEATURES.map(({ label, icon: Icon }) => (
-                    <label key={label} className="flex items-center gap-2">
-                        <input
-                            type="checkbox"
-                            checked={selectedFeatures.includes(label)}
-                            onChange={(e) => handleCheckboxChange(label, e.target.checked)}
-                            className="text-[#7D0633] focus:ring-[#7D0633]"
-                        />
-                        <Icon className="h-4 w-4 text-[#7D0633]" />
-                        <span className="text-sm text-gray-600">{label}</span>
-                    </label>
-                ))}
-            </div>
+            <FilterHeader icon={<Star className="h-4 w-4 mr-2 text-[#7D0633]" />} title="Características Especiales" />
+            <CheckboxFilterGroup selectedValues={selectedFeatures} onChange={onChange} options={FEATURES} />
         </div>
     );
 };

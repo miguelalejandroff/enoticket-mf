@@ -150,7 +150,7 @@ export const wineTours: WineTour[] = [
             'Degustación de 10 vinos diferentes',
             'Guía sumiller profesional',
         ],
-        languages: ['Español', 'Inglés', 'Francés'],
+        languages: ['Español', 'Inglés', 'Portugués'],
     },
     {
         id: 'tour-5',
@@ -223,7 +223,7 @@ export const wineTours: WineTour[] = [
         duration: '7 horas',
         rating: 4.9,
         reviewCount: 156,
-        imageUrl: 'https://images.pexels.com/photos/2702805/pexels-photo-2702805.jpeg',
+        imageUrl: 'https://ewine.cl/img/cms/Blog/Blog%20Valle%20del%20Maipo/Blog-_1000x400%20junio.png',
         description:
             'Una experiencia única que combina la degustación de vinos premium con un almuerzo gourmet de 5 tiempos en una de las bodegas más prestigiosas del Valle del Maipo.',
         availableDates: ['2025-05-15', '2025-05-16', '2025-05-17', '2025-05-18'],
@@ -253,7 +253,7 @@ export const wineTours: WineTour[] = [
         duration: '6 horas',
         rating: 4.8,
         reviewCount: 92,
-        imageUrl: 'https://images.pexels.com/photos/2479242/pexels-photo-2479242.jpeg',
+        imageUrl: 'https://chileestuyo.cl/wp-content/uploads/2021/03/valle-de-colchagua-chile-scaled.jpg',
         description:
             'Participa en la tradicional vendimia del Valle de Colchagua. Aprende sobre el proceso de cosecha y vinificación mientras recolectas uvas en los viñedos.',
         availableDates: ['2025-05-20', '2025-05-21', '2025-05-22'],
@@ -283,7 +283,7 @@ export const wineTours: WineTour[] = [
         duration: '4 horas',
         rating: 4.7,
         reviewCount: 78,
-        imageUrl: 'https://images.pexels.com/photos/2529172/pexels-photo-2529172.jpeg',
+        imageUrl: 'https://www.shoreexcursionsgroup.com/img/tour/SASTCHJNCSAVAL-2.jpg',
         description:
             'Disfruta de una experiencia única al atardecer en los viñedos de Casablanca, con degustación de vinos blancos y espumantes acompañados de tapas gourmet.',
         availableDates: ['2025-05-23', '2025-05-24', '2025-05-25'],
@@ -313,7 +313,7 @@ export const wineTours: WineTour[] = [
         duration: '8 horas',
         rating: 4.6,
         reviewCount: 64,
-        imageUrl: 'https://images.pexels.com/photos/2749500/pexels-photo-2749500.jpeg',
+        imageUrl: 'https://www.rutaschile.com/configurador/fotos/Paq_Grande_2242016072253.jpg',
         description:
             'Descubre la historia del Carmenere chileno en el Valle de Curicó, visitando viñedos especializados en esta cepa emblemática de Chile.',
         availableDates: ['2025-05-26', '2025-05-27', '2025-05-28'],

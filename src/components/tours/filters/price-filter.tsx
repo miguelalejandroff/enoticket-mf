@@ -1,5 +1,7 @@
 import { DollarSign } from 'lucide-react';
 import Slider from 'rc-slider';
+import Tooltip from 'rc-tooltip';
+import { cloneElement, useEffect, useRef, useState, type ReactElement } from 'react';
 
 interface PriceFilterProps {
     priceRange: [number, number];
@@ -7,6 +9,39 @@ interface PriceFilterProps {
 }
 
 export const PriceFilter = ({ priceRange, onChange }: PriceFilterProps) => {
+    const [internalRange, setInternalRange] = useState<[number, number]>(priceRange);
+    const tooltipRefs = useRef<Array<{ forceAlign?: () => void } | null>>([]);
+
+    useEffect(() => {
+        tooltipRefs.current.forEach((ref) => {
+            ref?.forceAlign?.();
+        });
+    }, [internalRange]);
+
+    const handleRender = (
+        node: ReactElement,
+        props: {
+            value: number;
+            dragging: boolean;
+            index: number;
+        }
+    ) => {
+        return (
+            <Tooltip
+                overlay={`$${props.value.toLocaleString('es-CL')}`}
+                visible={props.dragging}
+                placement="top"
+                destroyTooltipOnHide={false}
+                ref={(instance: { forceAlign?: () => void } | null) => {
+                    tooltipRefs.current[props.index] = instance;
+                }}
+                overlayInnerStyle={{ fontSize: '0.75rem' }}
+            >
+                {cloneElement(node)}
+            </Tooltip>
+        );
+    };
+
     return (
         <div className="mb-6">
             <h3 className="text-sm font-medium text-[#2E4347] mb-3 flex items-center">
@@ -19,8 +54,14 @@ export const PriceFilter = ({ priceRange, onChange }: PriceFilterProps) => {
                     min={35000}
                     max={100000}
                     step={1000}
-                    value={priceRange}
+                    value={internalRange}
+                    handleRender={handleRender}
                     onChange={(value) => {
+                        if (Array.isArray(value)) {
+                            setInternalRange([value[0], value[1]]);
+                        }
+                    }}
+                    onChangeComplete={(value) => {
                         if (Array.isArray(value) && value.length === 2) {
                             onChange([value[0], value[1]]);
                         }

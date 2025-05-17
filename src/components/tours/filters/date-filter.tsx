@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { DateRange, type Range, type RangeKeyDict } from 'react-date-range';
 import { format, startOfToday, addDays, isValid, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
@@ -24,6 +24,8 @@ export const DateFilter = ({ selectedRange, onChange }: DateFilterProps) => {
         },
     ]);
 
+    const pickerRef = useRef<HTMLDivElement>(null);
+
     const handleDateRangeChange = (ranges: RangeKeyDict) => {
         const { startDate, endDate } = ranges.selection;
         setDateRange([ranges.selection]);
@@ -36,8 +38,25 @@ export const DateFilter = ({ selectedRange, onChange }: DateFilterProps) => {
         }
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (pickerRef.current && !pickerRef.current.contains(event.target as Node)) {
+                setShowPicker(false);
+            }
+        };
+
+        if (showPicker) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showPicker]);
     return (
-        <div className="mb-6">
+        <div className="mb-6" ref={pickerRef}>
             <h3 className="text-sm font-medium text-[#2E4347] mb-3 flex items-center">
                 <Calendar className="h-4 w-4 mr-2 text-[#7D0633]" />
                 Fecha

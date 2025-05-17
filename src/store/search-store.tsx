@@ -1,6 +1,11 @@
 import { create } from 'zustand';
 import type { FilterOptions, WineTour } from '../types';
 import { wineTours } from '../data/tours';
+import { format, startOfToday, addDays } from 'date-fns';
+
+const today = startOfToday();
+const defaultStart = format(today, 'yyyy-MM-dd');
+const defaultEnd = format(addDays(today, 15), 'yyyy-MM-dd');
 
 interface SearchStore {
     filters: FilterOptions;
@@ -18,8 +23,8 @@ const defaultFilters: FilterOptions = {
     features: [],
     experienceType: '',
     dateRange: {
-        start: '2025-03-15',
-        end: '2025-03-31',
+        start: defaultStart,
+        end: defaultEnd,
     },
 };
 
