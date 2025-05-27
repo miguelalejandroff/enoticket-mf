@@ -47,7 +47,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://reserva.cyt.conchaytoro.cl/vcttourback/archivos/bann_20250408152034513.jpeg',
         description:
             'Visita la icónica Viña Concha y Toro, conoce sus legendarias bodegas y disfruta de una degustación premium de sus mejores vinos, incluyendo el famoso Don Melchor.',
-        availableDates: ['2025-05-15', '2025-05-16', '2025-05-17', '2025-05-18', '2025-05-19'],
+        availableDates: ['2025-05-27', '2025-05-30', '2025-06-02', '2025-06-05', '2025-06-09'],
         highlights: [
             'Tour guiado por las bodegas históricas',
             'Visita al legendario Casillero del Diablo',
@@ -77,7 +77,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://turistik.com/wp-content/uploads/2023/06/vinocasablanca-gal-mosaico-10.webp',
         description:
             'Un recorrido completo por tres viñas del Valle de Casablanca, famoso por sus vinos blancos. Incluye transporte, visitas guiadas y degustaciones en cada viña.',
-        availableDates: ['2025-05-20', '2025-05-21', '2025-05-22', '2025-05-23', '2025-05-24'],
+        availableDates: ['2025-05-28', '2025-05-31', '2025-06-03', '2025-06-06', '2025-06-10'],
         highlights: [
             'Visita a 3 viñas reconocidas del valle',
             'Almuerzo gourmet maridado con vinos',
@@ -107,7 +107,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/80/9c/9a.jpg',
         description:
             'Un recorrido por la histórica Viña Santa Rita, enfocado en la cepa emblemática de Chile: el Carmenere. Disfruta de sus jardines centenarios y su museo andino.',
-        availableDates: ['2025-05-25', '2025-05-26', '2025-05-27', '2025-05-28'],
+        availableDates: ['2025-05-29', '2025-06-01', '2025-06-04', '2025-06-07'],
         highlights: [
             'Visita a la casa patrimonial y jardines',
             'Tour por bodegas históricas de más de 100 años',
@@ -136,7 +136,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://explorechiletours.com/wp-content/uploads/2022/11/Chile-Wine-Tours-Featured.jpg',
         description:
             'La experiencia definitiva en el Valle de Colchagua, visitando sus viñas más prestigiosas y disfrutando de los mejores vinos tintos de Chile en un recorrido completo.',
-        availableDates: ['2025-05-18', '2025-05-19', '2025-05-20', '2025-05-21'],
+        availableDates: ['2025-05-30', '2025-06-02', '2025-06-05', '2025-06-08'],
         highlights: [
             'Visita a Montes Alpha, Lapostolle y otra viña premium',
             'Almuerzo gourmet en restaurante premiado',
@@ -166,7 +166,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://chileestuyo.cl/wp-content/uploads/2020/05/destino-Curico.png',
         description:
             'Descubre las joyas escondidas del Valle de Curicó visitando viñas boutique que producen vinos excepcionales en menor escala. Una experiencia más íntima y personalizada.',
-        availableDates: ['2025-05-15', '2025-05-16', '2025-05-22', '2025-05-23'],
+        availableDates: ['2025-06-01', '2025-06-04', '2025-06-07', '2025-06-10'],
         highlights: [
             'Visita a 2 viñas boutique exclusivas',
             'Encuentro con los enólogos',
@@ -196,7 +196,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://casablancavalley.cl/wp-content/uploads/2021/05/view-vineyard-casablanca-valley-chile-min.jpg',
         description:
             'Un tour especializado en la producción de espumantes chilenos, con visitas a las mejores casas productoras del Valle de Casablanca y degustaciones de método tradicional.',
-        availableDates: ['2025-05-17', '2025-05-19', '2025-05-21', '2025-05-24'],
+        availableDates: ['2025-05-31', '2025-06-03', '2025-06-06', '2025-06-09'],
         highlights: [
             'Explicación del método tradicional (champenoise)',
             'Visita a las cavas subterráneas',
@@ -226,7 +226,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://ewine.cl/img/cms/Blog/Blog%20Valle%20del%20Maipo/Blog-_1000x400%20junio.png',
         description:
             'Una experiencia única que combina la degustación de vinos premium con un almuerzo gourmet de 5 tiempos en una de las bodegas más prestigiosas del Valle del Maipo.',
-        availableDates: ['2025-05-15', '2025-05-16', '2025-05-17', '2025-05-18'],
+        availableDates: ['2025-06-02', '2025-06-05', '2025-06-08', '2025-06-11'],
         highlights: [
             'Degustación de vinos premium y reserva',
             'Almuerzo gourmet de 5 tiempos',
@@ -256,7 +256,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://chileestuyo.cl/wp-content/uploads/2021/03/valle-de-colchagua-chile-scaled.jpg',
         description:
             'Participa en la tradicional vendimia del Valle de Colchagua. Aprende sobre el proceso de cosecha y vinificación mientras recolectas uvas en los viñedos.',
-        availableDates: ['2025-05-20', '2025-05-21', '2025-05-22'],
+        availableDates: ['2025-06-03', '2025-06-06', '2025-06-09'],
         highlights: [
             'Experiencia de vendimia tradicional',
             'Clase de vinificación con enólogo',
@@ -286,7 +286,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://www.shoreexcursionsgroup.com/img/tour/SASTCHJNCSAVAL-2.jpg',
         description:
             'Disfruta de una experiencia única al atardecer en los viñedos de Casablanca, con degustación de vinos blancos y espumantes acompañados de tapas gourmet.',
-        availableDates: ['2025-05-23', '2025-05-24', '2025-05-25'],
+        availableDates: ['2025-06-04', '2025-06-07', '2025-06-10'],
         highlights: [
             'Vista panorámica del atardecer',
             'Degustación de vinos premium',
@@ -316,7 +316,7 @@ export const wineTours: WineTour[] = [
         imageUrl: 'https://www.rutaschile.com/configurador/fotos/Paq_Grande_2242016072253.jpg',
         description:
             'Descubre la historia del Carmenere chileno en el Valle de Curicó, visitando viñedos especializados en esta cepa emblemática de Chile.',
-        availableDates: ['2025-05-26', '2025-05-27', '2025-05-28'],
+        availableDates: ['2025-06-05', '2025-06-08', '2025-06-11'],
         highlights: ['Visita a 3 viñedos especializados', 'Cata vertical de Carmenere', 'Almuerzo tradicional chileno', 'Master class de cata'],
         includes: [
             'Transporte desde Curicó',
