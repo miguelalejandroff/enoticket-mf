@@ -102,7 +102,10 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-600">
-                    <p className="text-sm text-gray-300 text-center">&copy; {new Date().getFullYear()} EnoTicket. Todos los derechos reservados.</p>
+                    <p className="text-sm text-gray-300 text-center">
+                        &copy; {new Date().getFullYear()} Miguel Fuentealba. Esta plantilla está protegida por derechos de autor. Prohibida su
+                        reproducción, distribución o uso sin permiso.
+                    </p>
                 </div>
             </div>
         </footer>
